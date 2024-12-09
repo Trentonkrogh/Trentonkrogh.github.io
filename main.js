@@ -13,7 +13,7 @@ const boxmaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( boxgeometry, boxmaterial );
 scene.add( cube );
 
-const linematerial = new THREE.LineBasicMaterial({color: 0x0000ff});
+/*const linematerial = new THREE.LineBasicMaterial({color: 0x0000ff});
 const linepoints = [];
 points.push( new THREE.Vector3( - 10, 0, 0 ) );
 points.push( new THREE.Vector3( 0, 10, 0 ) );
@@ -22,7 +22,7 @@ points.push( new THREE.Vector3( 10, 0, 0 ) );
 const linegeometry = new THREE.BufferGeometry().setFromPoints( linepoints );
 const line = new THREE.Line( linegeometry, linematerial );
 scene.add( line );
-
+*/
 camera.position.z = 10;
 
 function animate() {
