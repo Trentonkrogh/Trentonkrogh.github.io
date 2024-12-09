@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import { THREE, ExtendedMesh, ExtendedObject3D } from 'enable3d'
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -12,6 +12,7 @@ const boxgeometry = new THREE.BoxGeometry( 1, 1, 1 );
 const boxmaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
 const cube = new THREE.Mesh( boxgeometry, boxmaterial );
 scene.add( cube );
+
 const linematerial = new THREE.LineBasicMaterial({color: 0x0000ff});
 const linepoints = [];
 points.push( new THREE.Vector3( - 10, 0, 0 ) );
@@ -19,10 +20,10 @@ points.push( new THREE.Vector3( 0, 10, 0 ) );
 points.push( new THREE.Vector3( 10, 0, 0 ) );
 
 const linegeometry = new THREE.BufferGeometry().setFromPoints( linepoints );
-const line = new THREE.Line( geometry, material );
+const line = new THREE.Line( linegeometry, linematerial );
 scene.add( line );
 
-camera.position.z = 5;
+camera.position.z = 10;
 
 function animate() {
 
